@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CatPhotoApp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="confettiButton">Are you sad? Click here!</button>
+    <div id="catParade">
+      <img src="cat1.jpg" alt="" />
+      <img src="cat2.jpg" alt="" />
+      <img src="cat3.jpg" alt="" />
+    </div>
+    <!-- STEP 1 -->
+    <!-- STEP 5 add main element-->
+    <main>
+      <div id="loadingScreen">Loading...</div>
+      <h1>CatPhotoApp</h1>
+      <!-- STEP 2 -->
+      <!-- STEP 16  add section -->
+      <section>
+        <h2 id="reverseText">Cat Photos</h2>
+        <!-- STEP 3 -->
+        <!-- STEP 4 -->
+        <!-- comments -->
+        <!-- TODO: Add link to cat photos -->
+        <!-- STEP 6 add indentation -->
+        <!-- STEP 12: make cat photos link -->
+        <p>
+          See more
+          <!-- STEP 14 - add target attribute -->
+          <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>
+          in our gallery.
+        </p>
+        <!-- STEP 10 add link -->
+        <!-- STEP 11 add text to link -->
+        <!-- STEP 13 delete the link  -->
+        <!-- deleted link -->
+        <!-- <a href="https://freecatphotoapp.com">link to cat pictures</a> -->
+        <!-- STEP 7 add image -->
+        <!-- STEP 8 add src attribute -->
+        <!-- STEP 9 add alt attribute -->
+        <!-- STEP 15 add link and put image into this link -->
+        <audio id="catSound1" src="cat1.mp3" preload="auto"></audio>
+        <audio id="catSound2" src="cat2.wav" preload="auto"></audio>
+        <audio id="catSound3" src="cat3.wav" preload="auto"></audio>
+        <!-- https://freecatphotoapp.com -->
+        <a href="#">
+          <img
+            id="catImage"
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+            alt="A cute orange cat lying on its back"
+          />
+        </a>
+      </section>
+      <!-- STEP 17 - add new section -->
+      <section>
+        <!-- STEP 18 - added h2 heading -->
+        <h2>Cat Lists</h2>
+        <!-- STEP 19 - add h3 heading -->
+        <h3>Things cats love:</h3>
+        <!-- STEP 20 - create unordered list -->
+        <ul>
+          <!-- STEP 21 add li elements -->
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <!-- STEP 22 add new image -->
+        <!-- STEP 23 nest img withing figure -->
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+            alt="A slice of lasagna on a plate."
+          />
+          <!-- STEP 24 add figcaption -->
+          <!-- add em to love word -->
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+        <!-- add h3 element -->
+        <h3>Top 3 things cats hate:</h3>
+        <!-- add ol list + 3 li elements -->
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <!-- add another figure section -->
+        <figure>
+          <!-- nest img + alt tag -->
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+            alt="Five cats looking around a field."
+          />
+          <!-- add figcaption -->
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
+      <!-- add new section -->
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label>
+              <input
+                id="indoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="indoor"
+                checked
+              />
+              Indoor
+            </label>
+            <label>
+              <input
+                id="outdoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="outdoor"
+              />
+              Outdoor
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input
+              id="loving"
+              type="checkbox"
+              name="personality"
+              value="loving"
+              checked
+            />
+            <label for="loving">Loving</label>
+            <input type="checkbox" name="personality" id="lazy" value="lazy" />
+            <label for="lazy">Lazy</label>
+            <input
+              type="checkbox"
+              name="personality"
+              id="energetic"
+              value="energetic"
+            />
+            <label for="energetic">Energetic</label>
+          </fieldset>
+          <input
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo url"
+            required
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div id="footerMessage">
+        <p id="footerMessage">You found the hidden message!</p>
+        <button id="animateParade" onclick="animateParade()">
+          Click for the surprise
+        </button>
+      </div>
+
+      <p onmouseover="showHiddenMessage()" onmouseout="hideMessage()">
+        Hover over here to find something interesting.
+      </p>
+      <p>
+        No Copyright -
+        <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2"></script>
+  </body>
+</html>
