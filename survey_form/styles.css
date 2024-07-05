@@ -11,60 +11,104 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: url("bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
 }
 
+::selection {
+  color: #fff;
+  background: #d43f8d;
+}
+
 .container {
-  width: 330px;
+  width: 400px;
   background: #fff;
   border-radius: 5px;
   text-align: center;
   padding: 50px 35px 10px 35px;
+  overflow-x: hidden;
 }
 
 .container header {
   font-size: 20px;
   font-weight: 600;
-  margin: 0 0 30px 0;
+  margin: 0 0 15px 0;
+}
+
+.container header p {
+  font-size: 15px;
 }
 
 .container .form-outer {
   width: 100%;
-  overflow: hidden;
+  /* overflow-x: hidden; */
+  display: flex;
+
 }
 
-.form-outer form {
+.container .form-outer form {
   display: flex;
-  width: 400%;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  margin-left: 10px;
 }
 
 .form-outer form .page {
-  width: 25%;
+  width: 100%;
+  flex: 0 0 auto;
+  margin-right: 15%;
+
 }
 
 .form-outer form .page .title {
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .form-outer form .page .field {
-  height: 45px;
-  width: 330px;
+  height: 40px;
+  width: 400px;
   margin: 45px 0;
   position: relative;
   display: flex;
 }
 
-.form-outer form .page .field label {
+#like .field.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#like .field.checkbox-container .label {
+  flex: 1;
+  font-size: 16px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.field.checkbox-container .inline {
+  display: inline-flex;
+
+}
+
+#like .checkbox-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+
+form .page .field .label {
   position: absolute;
   top: -30px;
   font-weight: 500;
-  display: block;
+  text-align: left;
+  padding-left: 5px;
 }
 
-.form-outer form .page .field input {
+form .page .field input {
   height: 100%;
   width: 100%;
   border: 1px solid lightgrey;
@@ -73,7 +117,14 @@ body {
   padding-left: 15px;
 }
 
-.form-outer form .page .field button {
+form .page .field select {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+form .page .field button {
   width: 100%;
   height: calc(100% + 5px);
   margin-top: -20px;
@@ -82,39 +133,161 @@ body {
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: 0.5s ease;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
-.form-outer form .page .field button:hover {
+form .page .field button:hover {
   background: #000;
 }
 
-.form-outer form .page .btns button {
+form .page .btns button {
   margin-top: -20px !important;
 }
 
-.form-outer form .page select {
-  width: 100%;
-  padding-left: 10px;
-  font-size: 17px;
-  font-weight: 500;
-}
-
-
-form .page .btns button .prev {
+form .page .btns button.prev {
   margin-right: 3px;
   font-size: 17px;
 }
 
-form .page .btns button .next {
+form .page .btns button.next {
   margin-left: 3px;
 }
 
 .container .progress-bar {
   display: flex;
-  margin: 40px 0;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 20px 0px;
+}
+
+.container .progress-bar .step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.container .progress-bar .step p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.progress-bar .step .bullet {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.progress-bar .step .bullet.active {
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+
+.progress-bar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #000;
+}
+
+
+
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+
+.progress-bar .step p.active {
+  color: #d43f8d;
+}
+
+
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  background: #262626;
+  content: "";
+  height: 4px;
+  top: 50%;
+  width: calc(100% - 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+
+.progress-bar .step .bullet.active:after {
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3 linear forwards;
+}
+
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-bar:before {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 6%;
+  width: 87%;
+  height: 4px;
+  background: #000;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.progress-bar .step .check {
+  display: none;
+
+}
+
+.progress-bar .step .bullet i {
+  color: #fff;
+}
+
+.progress-bar .step .bullet.active i {
+  display: block;
+}
+
+.progress-bar .step .bullet span {
+  display: block;
+}
+
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+
+textarea {
+  width: 100%;
+  display: block;
+  border-color: #ddd;
 }

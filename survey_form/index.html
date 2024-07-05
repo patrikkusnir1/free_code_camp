@@ -6,61 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/c45f4aaac4.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c45f4aaac4.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1 id="title">Patient satisfaction survey</h1>
+        <h1 id="title">Satisfaction Survey</h1>
+
+        <!-- Progress bar -->
         <div class="progress-bar">
           <div class="step">
-            <p>Name
-              <div class="bullet">
-                <span>1</span>
-              </div>
-              <div class="check"></div>
-            </p>
+            <p>Name</p>
+            <div class="bullet"><span>1</span></div>
+            <div class="check fas fa-check"></div>
           </div>
+
           <div class="step">
-            <p>Contact
-              <div class="bullet"><span>2</span></div>
-              <div class="check fas fa-check"></div>
-            </p>
+            <p>Contact</p>
+            <div class="bullet"><span>2</span></div>
+            <div class="check fas fa-check"></div>
           </div>
+
           <div class="step">
-            <p>Date of Birth
-              <div class="bullet"><span>3</span></div>
-              <div class="check fas fa-check"></div>
-            </p>
+            <p>Birth</p>
+            <div class="bullet"><span>3</span></div>
+            <div class="check fas fa-check"></div>
           </div>
+
           <div class="step">
-            <p>Satisfactory
-              <div class="bullet"><span>4</span></div>
-              <div class="check fas fa-check"></div>
-            </p>
+            <p>Satisfactory</p>
+            <div class="bullet"><span>4</span></div>
+            <div class="check fas fa-check"></div>
           </div>
+
           <div class="step">
-            <p>Submit
-              <div class="bullet"><span>5</span></div>
-              <div class="check fas fa-check"></div>
-            </p>
+            <p>Submit</p>
+            <div class="bullet"><span>5</span></div>
+            <div class="check fas fa-check"></div>
           </div>
         </div>
-        <p id="description">
+        <!-- description -->
+        <p>
           Please describe us, how were you satisfied with service of our
           pharmacists.
         </p>
       </header>
+
+      <!-- FORM -->
       <div class="form-outer">
-        <form action="#" id="survey-form">
-          <div class="page">
+        <form action="#" id="survey-form" novalidate>
+          <div class="page slide-page">
             <div class="title">Basic info:</div>
             <div class="field">
               <div class="label">
                 Your First Name:
                 <input
                   id="first-name"
-                  name="name"
+                  name="first-name"
                   type="text"
                   required
                   placeholder="Janko"
@@ -72,15 +77,15 @@
                 Your Last Name:
                 <input
                   id="last-name"
-                  name="name"
+                  name="last-name"
                   type="text"
                   required
                   placeholder="Mrkvicka"
                 />
               </div>
             </div>
-            <div class="field">
-              <button id="next-button">Next</button>
+            <div class="field firstNext">
+              <button class="next">Next</button>
             </div>
           </div>
 
@@ -103,15 +108,14 @@
               <input
                 id="phone-number"
                 name="phone-number"
-                type="number"
-                minlength="13"
-                maxlength="13"
+                type="tel"
+                pattern="\+421[0-9]{9}"
                 placeholder="+421949444908"
               />
             </div>
             <div class="field btns">
-              <button class="prev-1 prev">Previous</button>
-              <button class="next-1 next">Next</button>
+              <button class="prev">Previous</button>
+              <button class="next">Next</button>
             </div>
           </div>
 
@@ -119,129 +123,127 @@
             <div class="title">Date of Birth:</div>
             <div class="field">
               <div class="label">Date:</div>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                placeholder="jankomrkv@gmail.com"
-              />
+              <input id="date" name="date" type="date" required />
             </div>
 
             <div class="field">
               <div class="label">Gender</div>
-              <select>
+              <select name="gender" required>
+                <option value="">Select one</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
               </select>
             </div>
             <div class="field btns">
-              <button class="prev-2 prev">Previous</button>
-              <button class="next-2 next">Next</button>
+              <button class="prev">Previous</button>
+              <button class="next">Next</button>
             </div>
           </div>
-          <div class="page">
-              <div class="title">Your satisfaction</div>
 
-              <div class="field">
-                <div id="label">
-                  How much have you been happy with our service?
-                </div>
-                <div>
-                  <select name="dropdown" id="dropdown">
-                    <option value="">Select one</option>
-                    <option value="1">Very happy</option>
-                    <option value="2">Quite satisfied</option>
-                    <option value="3">OK service</option>
-                    <option value="4">Poor</option>
-                  </select>
-                </div>
+          <div class="page">
+            <div class="title">Your satisfaction</div>
+
+            <div class="field">
+              <div id="label">
+                How much have you been happy with our service?
               </div>
-              <div class="field btns">
-                <button class="prev-2 prev">Previous</button>
-                <button class="next-2 next">Next</button>
+            </div>
+            <div class="field">
+              <select name="satisfaction" id="dropdown">
+                <option value="">Select one</option>
+                <option value="1">Very happy</option>
+                <option value="2">Quite satisfied</option>
+                <option value="3">OK service</option>
+                <option value="4">Poor</option>
+              </select>
+            </div>
+            <div class="field btns">
+              <button class="prev">Previous</button>
+              <button class="next">Next</button>
             </div>
           </div>
-            <div class="page">
-              <div class="title">What do you like at our chemist's?</div>
-              <div class="field">
-                <div class="label">
-                  Friendliness and professionalism of the staff.
-                </div>
+
+          <div class="page" id="like">
+            <div class="title">What do you like at our chemist's?</div>
+
+            <div class="field checkbox-container">
+              <div class="label">
+                Friendliness and professionalism of the staff.
+              </div>
+              <div class="inline">
                 <input
                   type="checkbox"
-                  name="service"
-                  id="checkbox"
-                  value="quality-of-service"
+                  name="profesionalism"
+                  id="professionalism"
+                  value="professionalism"
                 />
               </div>
-              <div class="field">
-                <div class="label">
-                  Variety of over-the-counter medications.
-                </div>
-                <input
-                  type="checkbox"
-                  name="product-range"
-                  id="product-range"
-                  value="product-range"
-                />
-              </div>
-              <div class="field">
-                  <div class="label">
-                    Availability of express service options.
-                  </div>
-                  <input
-                    type="checkbox"
-                    name="express-service"
-                    id="express-service"
-                    value="express-service"
-                />
-              </div>
-              <div class="field">
-                  <div class="label">
-                    Cleanliness and organization of the store.
-                  </div>
-                  <input
-                    type="checkbox"
-                    name="store-environment"
-                    id="store-environment"
-                    value="store-environment"
-                  />
-              </div>
-              <div class="field">
-                  <div class="label">
-                    Availability of discounts and promotions.
-                  </div>
-                  <input
-                    type="checkbox"
-                    name="discounts"
-                    id="discounts"
-                    value="discounts"
-                  />
-              </div>
-              <div class="field btns">
-                <button class="prev-2 prev">Previous</button>
-                <button class="next-2 next">Next</button>
             </div>
+
+            <div class="field checkbox-container inline">
+              <div class="label">Variety of over-the-counter medications.</div>
+              <input
+                type="checkbox"
+                name="product-range"
+                id="product-range"
+                value="product-range"
+              />
             </div>
-            <div class="page">
-              <div class="title">Anything else what you would like to comment?</div>
-                <div class="field">
-                  <textarea
-                    name="comments"
-                    id="comments"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                </div>
-              <div class="field btns">
-                  <button class="prev-3 prev" id="prev-button">Previous</button>
-                  <button class="submit">Submit</button>
+            <div class="field checkbox-container">
+              <div class="label">Availability of express service options.</div>
+              <input
+                type="checkbox"
+                name="express-service"
+                id="express-service"
+                value="express-service"
+              />
+            </div>
+            <div class="field checkbox-container">
+              <div class="label">
+                Cleanliness and organization of the store.
               </div>
+              <input
+                type="checkbox"
+                name="store-environment"
+                id="store-environment"
+                value="store-environment"
+              />
+            </div>
+            <div class="field checkbox-container">
+              <div class="label">Availability of discounts and promotions.</div>
+              <input
+                type="checkbox"
+                name="discounts"
+                id="discounts"
+                value="discounts"
+              />
+            </div>
+            <div class="field btns">
+              <button class="prev">Previous</button>
+              <button class="next">Next</button>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">
+              Anything else what you would like to comment?
+            </div>
+            <div class="field">
+              <textarea
+                name="comments"
+                id="comments"
+                cols="30"
+                rows="40"
+              ></textarea>
+            </div>
+            <div class="field btns">
+              <button class="prev">Previous</button>
+              <button class="submit">Submit</button>
             </div>
           </div>
         </form>
       </div>
-    
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
