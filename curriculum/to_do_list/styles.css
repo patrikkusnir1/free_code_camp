@@ -1,0 +1,56 @@
+.todo-list {
+  list-style-type: none;
+}
+
+.todo-list ul {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.todo-list li {
+  margin-bottom: 50px;
+  background-color: rgb(167, 209, 211);
+  border-radius: 4px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.todo-list label {
+  padding-left: 5px;
+}
+
+.todo-list input ::before{
+  padding-left: 10px;
+}
+
+.container {
+  width: 600px;
+  margin: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #424632;
+}
+
+a:visited {
+  color: #35682D
+}
+
+a:hover {
+  color: #D0D0D0
+}
+
+a:active {
+  color: brown;
+}
+
+a:focus {
+  outline: 2px solid brown;
+}
