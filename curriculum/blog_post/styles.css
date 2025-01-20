@@ -8,6 +8,7 @@
 .post-img {
   background-size: cover;
   border-bottom: 2px solid brown;
+  width: 300px;
 }
 
 .post-content {
