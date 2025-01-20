@@ -1,19 +1,4 @@
-a:link { /*  unvisited links */
-  color: red;
-}
-/* visited link */
-a:visited {
-  color: green;
-}
-
-a:hover {
-  color: yellow
-}
-/* outline state */
-a:focus {
-  outline: 2px solid orange;
-}
-
-a:active {
-  color: pink;
+img {
+  border: 2px solid black;
+  border-radius: 10px;
 }
