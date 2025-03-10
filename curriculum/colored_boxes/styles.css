@@ -1,0 +1,35 @@
+body {
+  background-color: #f4f4f4;
+}
+
+.color-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.color-box {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.color1 {
+  background-color: #4E3B31;
+}
+
+.color2 {
+  background-color: rgb(150, 153, 146);
+}
+
+.color3 {
+  background-color: lightgoldenrodyellow;
+}
+
+.color4 {
+  background-color: hsl(173, 98%, 18%);
+}
+
+.color5 {
+  background-color: darkgoldenrod;
+}
