@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#e66465, #9198e5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apply-box {
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.form-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: royalblue;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+input:valid,
+select:valid textarea:valid {
+  border-color: green;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+button {
+  background-color: royalblue;
+  border: transparent solid 2px;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 30px;
+  margin: 0 auto;
+  margin-left: 300px;
+  width: 400px;
+  display: block;
+}
+
+button:hover {
+  background-color: rgb(19, 49, 138);
+  border: 2px solid royalblue;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+.form-control:nth-child(5) {
+  grid-column: 1/ span 2;
+}
+
+textarea {
+  width: 100%;
+}
+
+@media(max-width: 460px) {
+  .form-control:nth-child(5) {
+    grid-column: 1/ span 1;
+  }
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: green;
+  background-color: aquamarine;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.radio-group input[type="radio"]:checked+label {
+  color: green;
+}
+
+input:nth-child(1) {
+  border: 2px solid aqua;
+}
