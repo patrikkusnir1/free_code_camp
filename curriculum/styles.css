@@ -1,4 +1,26 @@
-img {
-  filter: contrast(150%) brightness(110%) sepia(30%);
-  width: 500px;
+main {
+  display: flex;
+  border: 2px solid red;
+  height: 200px;
+  align-items: stretch;
+
+
+}
+
+div {
+  width: 50px;
+  height: 100px;
+}
+
+#first-div {
+  background-color: #4d70b2;
+}
+
+#second-div {
+  background-color: #5c4db2;
+  align-self: stretch;
+}
+
+#third-div {
+  background-color: #4da3b2;
 }
