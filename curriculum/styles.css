@@ -1,5 +1,4 @@
-div {
-  color: white;
-  background-color: #1b1b32;
-  width: calc(50% / 5)
+img {
+  filter: contrast(150%) brightness(110%) sepia(30%);
+  width: 500px;
 }
