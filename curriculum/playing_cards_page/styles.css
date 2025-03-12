@@ -1,0 +1,92 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+#playing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+
+}
+
+.card .left,
+.card .right {
+
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.card .left {
+  align-self: flex-start;
+}
+
+.card .left .suit {
+  margin-left: -12px;
+}
+
+
+
+
+.card .middle {
+  align-self: center;
+  font-size: 50px;
+}
+
+#playing-cards .card:nth-child(2) .middle p:nth-child(2) {
+  margin-top: 20px;
+  transform: rotate(180deg);
+}
+
+#playing-cards .card:nth-child(3) .middle p:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+#playing-cards .card:nth-child(4) .middle {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.middle .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.middle .row:nth-child(2) {
+  transform: rotate(180deg);
+}
+
+.middle .row.center {
+  justify-content: center;
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+.card:nth-child(5) .middle .row p {
+  column-gap: 200px;
+}
