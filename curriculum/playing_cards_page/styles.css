@@ -8,6 +8,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
@@ -32,7 +33,7 @@ p {
   font-size: 50px;
 }
 
-.card .left {
+.left {
   align-self: flex-start;
 }
 
@@ -43,9 +44,10 @@ p {
 
 
 
-.card .middle {
+.middle {
   align-self: center;
   font-size: 50px;
+  flex-direction: column;
 }
 
 #playing-cards .card:nth-child(2) .middle p:nth-child(2) {
