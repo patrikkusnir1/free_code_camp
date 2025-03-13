@@ -37,8 +37,8 @@ article {
 }
 
 #image {
-  max-width: 600px;
-  height: 500px;
+  max-width: 100%;
+  height: auto;
   width: 70%;
   margin: 0 auto;
   display: block;
