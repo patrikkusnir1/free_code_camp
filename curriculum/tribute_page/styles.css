@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 main {
   text-align: center;
   font-family: "PT Sans", sans-serif;
@@ -10,6 +18,16 @@ h1,
 h2 {
   font-weight: 600;
   font-family: "Playfair Display", serif;
+  padding: 20px;
+}
+
+header {
+  background-color: #f2eae8;
+  padding: 50px;
+}
+
+article {
+  background-color: #f2eae8;
 }
 
 
@@ -34,7 +52,9 @@ blockquote {
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
-  padding: 10px 20px;
+  padding: 20px 20px 40px;
+
+
 }
 
 blockquote {
@@ -81,18 +101,27 @@ blockquote::after {
 
 .quote {
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
-  gap: 0;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 60%;
-  margin: 0 260px;
+  margin-left: 300px;
+  gap: 0;
+  padding-bottom: 50px;
 }
 
 
 
 .quote p {
-  font-size: 1.1em;
-  margin-top: 0;
+  display: inline-block;
+  font-size: 1em;
   text-align: right;
+  padding: 0;
+  align-self: flex-end;
+  margin-bottom: 50px;
+  margin-top: -30px;
+}
+
+footer {
+  padding: 50px;
 }
