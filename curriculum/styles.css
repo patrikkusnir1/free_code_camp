@@ -1,26 +1,22 @@
-main {
-  display: flex;
-  border: 2px solid red;
-  height: 200px;
-  align-items: stretch;
-
-
+@font-face {
+  font-family: "Roboto";
+  src: url("web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff");
 }
 
-div {
-  width: 50px;
-  height: 100px;
+body {
+  font-family: "Roboto";
+  background-color: #fff;
+  color: #333;
 }
 
-#first-div {
-  background-color: #4d70b2;
-}
-
-#second-div {
-  background-color: #5c4db2;
-  align-self: stretch;
-}
-
-#third-div {
-  background-color: #4da3b2;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
