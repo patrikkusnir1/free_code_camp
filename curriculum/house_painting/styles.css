@@ -31,6 +31,7 @@ body {
 }
 
 #roof {
+  z-index: 1;
   width: 493px;
   height: 100px;
   border: 4px solid transparent;
@@ -109,13 +110,26 @@ body {
 }
 
 #chimney {
-  width: 100px;
-  height: 20px;
+  width: 80px;
+  height: 80px;
   border: 4px solid black;
   background-color: bisque;
   right: 10px;
-  top: -20px;
-  z-index: -1;
+  top: -40px;
+  z-index: 0;
+}
+
+.inner-chimney {
+  position: absolute;
+  width: 72px;
+  height: 20px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: bisque;
+  right: 0px;
+  left: 0;
+  top: 17px;
+  z-index: 0;
 }
 
 .circle {
