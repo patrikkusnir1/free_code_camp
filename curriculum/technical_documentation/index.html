@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Technical Documentation Page</title>
+</head>
+
+<body>
+  <div id="main-doc">
+    <section id="python_tutorial" class="main-section">
+      <header>
+        Python Tutorial
+      </header>
+
+
+      <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a
+        simple but
+        effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its
+        interpreted nature, make it an ideal language for scripting and rapid application development in many areas on
+        most
+        platforms.</p>
+      <p>The Python interpreter and the extensive standard library are freely available in source or binary form for all
+        major
+        platforms from the Python web site, https://www.python.org/, and may be freely distributed. The same site also
+        contains
+        distributions of and pointers to many free third party Python modules, programs and tools, and additional
+        documentation.</p>
+    </section>
+    <section id="whetting_your_appetite" class="main-section">
+      <header>
+        Whetting Your Appetite
+      </header>
+      <nav id="navbar">
+        <header>Using the Python Interpreter</header>
+        <ul>
+          <li><a href="" class="nav-link">Previous topic</a>
+            <ul>
+              <a href="" class="nav-link">
+                <li>The Python Tutorial</li>
+              </a>
+            </ul>
+          </li>
+          <li><a href="" class="nav-link">Next topic</a>
+            <ol start="2">
+              <a href="" class="nav-link">
+                <li>Source Code Encoding</li>
+              </a>
+            </ol>
+          </li>
+        </ul>
+      </nav>
+      <p>If you do much work on computers, eventually you find that there’s some task you’d like to automate. For
+        example, you
+        may wish to perform a search-and-replace over a large number of text files, or rename and rearrange a bunch of
+        photo
+        files in a complicated way. Perhaps you’d like to write a small custom database, or a specialized GUI
+        application, or a
+        simple game.</p>
+      <p>If you’re a professional software developer, you may have to work with several C/C++/Java libraries but find
+        the usual
+        write/compile/test/re-compile cycle is too slow. Perhaps you’re writing a test suite for such a library and find
+        writing
+        the testing code a tedious task. Or maybe you’ve written a program that could use an extension language, and you
+        don’t
+        want to design and implement a whole new language for your application.</p>
+    </section>
+    <section id="python_interpreter" class="main-section">
+      <header>
+        Python Interpreter
+      </header>
+      <h2>Table of Contents</h2>
+      <nav id="navbar">
+        <header>Using the Python Interpreter</header>
+        <ol>
+          <li>Invoking the Interpreter
+            <ol>
+              <a href="" class="nav-link">
+                <li>Argument Passing</li>
+              </a>
+              <a href="" class="nav-link">
+                <li>Interactive Mode</li>
+              </a>
+            </ol>
+          </li>
+          <li>The Interpreter and Its Environment
+            <ol>
+              <a href="" class="nav-link">
+                <li>Source Code Encoding</li>
+              </a>
+            </ol>
+          </li>
+        </ol>
+      </nav>
+      <p>The Python interpreter is usually installed as /usr/local/bin/python3.13 on those machines where it is
+        available;
+        putting /usr/local/bin in your Unix shell’s search path makes it possible to start it by typing the command:</p>
+      <p><code>python3.13</code></p>
+    </section>
+    <!-- ADD Navbar -->
+    <section id="informal_introduction" class="main-section">
+      <header>
+        Informal Introduction
+      </header>
+      <p>In the following examples, input and output are distinguished by the presence or absence of prompts (>>> and
+        …): to
+        repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin
+        with a
+        prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an example means you
+        must
+        type a blank line; this is used to end a multi-line command.</p>
+      <p>You can toggle the display of prompts and output by clicking on >>> in the upper-right corner of an example
+        box. If you
+        hide the prompts and output for an example, then you can easily copy and paste the input lines into your
+        interpreter.</p>
+      <p>Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments
+        in Python
+        start with the hash character, #, and extend to the end of the physical line. A comment may appear at the start
+        of a
+        line or following whitespace or code, but not within a string literal. A hash character within a string literal
+        is just
+        a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when
+        typing
+        in examples.</p>
+      <p>Some examples:</p>
+      <code>
+        # this is the first comment <br>
+        spam = 1 # and this is the second comment <br>
+        # ... and now a third! <br>
+        text = "# This is not a comment because it's inside quotes." <br>
+      </code>
+      <p>The interpreter acts as a simple calculator: you can type an expression at it and it will write the value.
+        Expression
+        syntax is straightforward: the operators +, -, * and / can be used to perform arithmetic; parentheses (()) can
+        be used
+        for grouping. For example:</p>
+      <code>
+          2 + 2 <br>
+          4 <br>
+          50 - 5*6 <br>
+          20 <br>
+          (50 - 5*6) / 4 <br>
+          5.0 <br>
+          8 / 5 # division always returns a floating-point number <br>
+          1.6 <br>
+        </code>
+    </section>
+    <!-- ADD Navbar -->
+    <section id="control_flow" class="main-section">
+      <header>
+        Control Flow
+      </header>
+      <p>As well as the while statement just introduced, Python uses a few more that we will encounter in this chapter.
+      </p>
+      <p>Perhaps the most well-known statement type is the if statement. For example:</p>
+      <code>
+        x = int(input("Please enter an integer: ")) <br>
+        Please enter an integer: 42 <br>
+        if x < 0:  <br>
+        x=0 print('Negative changed to zero') 
+        elif x==0: print('Zero') <br> 
+        elif x==1: print('Single') <br> 
+        else: print('More') <br>
+        More
+      </code>
+      <p>The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always
+        iterating over
+        an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the
+        iteration step
+        and halting condition (as C), Python’s for statement iterates over the items of any sequence (a list or a
+        string), in
+        the order that they appear in the sequence. For example (no pun intended):</p>
+      <code>
+        # Measure some strings: <br>
+        words = ['cat', 'window', 'defenestrate'] <br>
+        for w in words: <br>
+        print(w, len(w)) <br>
+        
+        cat 3 <br>
+        window 6 <br>
+        defenestrate 12 <br>
+      </code>
+    </section>
+  </div>
+</body>
+
+</html>
