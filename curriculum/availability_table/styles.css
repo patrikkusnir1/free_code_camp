@@ -1,0 +1,68 @@
+th {
+  border: 1px solid #000;
+  width: 40px;
+  height: 20px;
+
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+:root {
+  --color0: #F5F5F5;
+  --color1: #D0E1F9;
+  --color2: #A9C4EB;
+  --color3: #7AA7E9;
+  --color4: #4F88E3;
+  --color5: #2562CC;
+  --solid-border: 1px solid #000;
+  --dashed-border: 2px dashed #000;
+}
+
+.available-0 {
+  background-color: var(--color0);
+}
+
+.available-1 {
+  background-color: var(--color1);
+}
+
+.available-2 {
+  background-color: var(--color2);
+}
+
+.available-3 {
+  background-color: var(--color3);
+}
+
+.available-4 {
+  background-color: var(--color4);
+}
+
+.available-5 {
+  background-color: var(--color5);
+}
+
+.sharp td {
+  border-bottom: var(--solid-border);
+  background-color: green;
+}
+
+.half td {
+  border-bottom: var(--dashed-border);
+  background-color: goldenrod;
+}
+
+#legend-gradient {
+  background: linear-gradient(to right,
+      var(--color0) 0%, var(--color0) 16%,
+      var(--color1) 16%, var(--color1) 32%,
+      var(--color2) 32%, var(--color2) 48%,
+      var(--color3) 48%, var(--color3) 62%,
+      var(--color4) 62%, var(--color4) 78%,
+      var(--color5) 78%, var(--color5) 100%);
+  width: 100px;
+  height: 20px;
+}
