@@ -8,6 +8,7 @@ th {
 table {
   border-collapse: separate;
   border-spacing: 0;
+  border: 1px solid #000;
 }
 
 :root {
@@ -18,7 +19,7 @@ table {
   --color4: #4F88E3;
   --color5: #2562CC;
   --solid-border: 1px solid #000;
-  --dashed-border: 2px dashed #000;
+  --dashed-border: 1px dashed #000;
 }
 
 .available-0 {
@@ -45,24 +46,24 @@ table {
   background-color: var(--color5);
 }
 
-.sharp td {
+.sharp td,
+.sharp th {
   border-bottom: var(--solid-border);
-  background-color: green;
 }
 
-.half td {
+.half td,
+.half th {
   border-bottom: var(--dashed-border);
-  background-color: goldenrod;
 }
 
 #legend-gradient {
   background: linear-gradient(to right,
-      var(--color0) 0%, var(--color0) 16%,
-      var(--color1) 16%, var(--color1) 32%,
-      var(--color2) 32%, var(--color2) 48%,
-      var(--color3) 48%, var(--color3) 62%,
-      var(--color4) 62%, var(--color4) 78%,
-      var(--color5) 78%, var(--color5) 100%);
+      var(--color0) 0% 16%,
+      var(--color1) 16% 32%,
+      var(--color2) 32% 48%,
+      var(--color3) 48% 62%,
+      var(--color4) 62% 78%,
+      var(--color5) 100%);
   width: 100px;
   height: 20px;
 }
