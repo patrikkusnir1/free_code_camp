@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: white;
+  background-color: dodgerblue;
+  text-align: center;
+  padding: 20px 10px
+}
+
+.magazine-cover {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-areas: "title title title"
+                        "feature-article feature-article cover-image"
+                        "small-article1 small-article2 cover-image";
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  width: 100vw;
+}
+
+.title {
+  grid-area: title;
+}
+
+.feature-article {
+  grid-area: feature-article;
+}
+
+.cover-image {
+  grid-area: cover-image;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+}
