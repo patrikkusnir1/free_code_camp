@@ -1,14 +1,29 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: antiquewhite;
+  box-sizing: border-box;
 }
 
 header {
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
+  gap: 300px;
+  position: fixed;
 }
 
 .logo {
   display: flex;
+}
+
+#nav-bar {
+  position: fixed;
+  padding-right: 50px;
+  margin-left: 1000px;
+}
+
+#nav-bar a {
+  color: #000;
+  text-decoration: none;
 }
 
 nav ul {
@@ -31,4 +46,96 @@ input, button {
   text-align: center;
   margin: 20px auto;
   padding: 5px 10px;
+}
+
+#pricing {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#features {
+  text-align: center;
+  max-width: 50%;
+  margin-left: 25%;
+}
+
+#features p {
+  text-align: left;
+}
+
+#pricing div {
+  border: 1px solid brown;
+  /* padding: 10px 50px; */
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+#pricing h2 {
+  background-color: grey;
+  padding: 15px 0px;
+  margin: 0;
+  width: 100%;
+}
+
+#pricing button {
+  margin-bottom: 0;
+  justify-self: flex-end;
+  text-transform: uppercase;
+  color: black;
+}
+
+iframe {
+  text-align: center;
+  display: block;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  }
+
+button, input[type=submit] {
+    cursor: pointer;
+    background-color: rgb(255, 183, 0);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid brown;
+    border-radius: 3px;
+    padding: 9px 15px;
+    font-size: 16px;
+}
+
+footer ul,
+footer p {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  padding: 10px;
+  text-align: right;
+}
+
+footer p {
+  padding-right: 10px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+@media all and (max-width: 600px) {
+  #pricing {
+    display: block;
+  }
 }
