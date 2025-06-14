@@ -1,0 +1,19 @@
+
+
+div {
+  height: 200px;
+  width: 200px;
+  transition: transform 0.3s ease-out;
+  background-color: crimson;
+}
+
+div:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  div {
+    transition: none;
+  }
+}
