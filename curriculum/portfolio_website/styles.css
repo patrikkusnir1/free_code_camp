@@ -1,0 +1,56 @@
+body {
+  font-size: 20px;
+}
+
+#welcome-section {
+  height: 100vh;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategrey;
+  color: antiquewhite;
+}
+
+#welcome-section h2,
+#project-section h2 {
+  color: hotpink;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
+}
+#navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgb(173, 68, 68);
+
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin-right: 30px;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul li:hover {
+  background-color: coral;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
