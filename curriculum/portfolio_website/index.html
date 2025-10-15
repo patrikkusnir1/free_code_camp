@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Personal Portfolio</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -66,8 +68,33 @@ Note: Be sure to link your stylesheet in your HTML and apply your CSS.
       </div>
     </section>
     <section id="contact">
-      <ul>
-        <li><a href="#" id="profile-link" target="_blank">Link to my github</a></li>
+      <p>You can contact me here:</p>
+      <ul class="social-list">
+        <li>
+          <a href="https://github.com/patrikkusnir1" id="profile-link" class="social-link" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+            <span class="span">Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/patrik.kusnir.10" id="profile-link" class="social-link" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <span class="span">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/patrik-kusnir/" class="social-link">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <span class="span">LinkedIn</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://www.instagram.com/patrikkusnir1/" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <span class="span">Instagram</span>
+          </a>
+        </li>
       </ul>
     </section>
   </body>

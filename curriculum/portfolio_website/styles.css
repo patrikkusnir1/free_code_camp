@@ -96,3 +96,48 @@ a {
 #contact a {
   color: black;
 }
+
+#contact {
+  background-color: greenyellow;
+  padding: 20px
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus-visible) {
+  color: var(--text-carolina-blue);
+  transform: translateY(-2px);
+}
+
+
+
+
+@media all and (max-width: 500px) {
+  #project-section {
+    display: block;
+  }
+
+  .project-tile {
+    width: 100%;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .img {
+    width: 100%;
+  }
+}
